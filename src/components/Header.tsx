@@ -27,7 +27,7 @@ function Header() {
     }, []);
     return (
         <div
-            className={`flex justify-evenly fixed top-0 w-full items-center transition-all ${
+            className={`flex justify-evenly fixed top-0 w-full items-center transition-all z-50 ${
                 scrolled ? "bg-blue-500 shadow-lg" : "bg-transparent"
             }`}
         >

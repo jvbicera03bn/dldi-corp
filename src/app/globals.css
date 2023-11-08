@@ -17,5 +17,6 @@
 }
 
 .logos {
+  z-index: 0;
   filter: invert(100%) sepia(1%) saturate(1361%) hue-rotate(222deg) brightness(122%) contrast(100%);
 }
