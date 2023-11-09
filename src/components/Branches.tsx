@@ -6,6 +6,7 @@ import { FiFacebook } from "react-icons/fi";
 import { AiOutlineDown } from "react-icons/ai";
 import AnimateHeight from "react-animate-height";
 import { useState } from "react";
+import Link from "next/link";
 
 interface branchList {
     title: string;
@@ -90,19 +91,23 @@ function Branches() {
                                     alt={item.title}
                                     src={item.img}
                                 />
-                                <div className="flex w-[250px] flex-col items-start gap-2 px-5 py-2 text-white">
-                                    <h1 className="flex text-lg">
+                                <div className="flex w-[300px] flex-col items-start gap-2 px-5 py-2 text-white">
+                                    <h1 className="flex text-xl font-semibold">
                                         {item.title}
                                     </h1>
                                     <h3 className="text-md flex items-center gap-4">
                                         <BsTelephone size="20" />
                                         {item.contactNum}
                                     </h3>
-                                    <h3 className="text-md flex items-center gap-3">
+                                    <Link
+                                        href={item.facebook}
+                                        target="blank"
+                                        className="flex items-center gap-3 text-base text-blue-100 decoration-blue-100 decoration-solid hover:underline"
+                                    >
                                         <FiFacebook size="25" />
-                                        {item.title}
-                                    </h3>
-                                    <h3 className="flex items-start gap-3 text-justify text-sm">
+                                        DentalScape Facebook
+                                    </Link>
+                                    <h3 className="flex items-center gap-1 text-justify text-sm">
                                         <IoLocationOutline size="60" />
                                         {item.location}
                                     </h3>
