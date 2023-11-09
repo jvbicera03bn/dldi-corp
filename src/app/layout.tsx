@@ -20,7 +20,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en" className="snap-y snap-proximity">
+        <html lang="en" className="snap-y snap-mandatory">
             <body className={`${sspro.className}`}>
                 <header>
                     <Header></Header>

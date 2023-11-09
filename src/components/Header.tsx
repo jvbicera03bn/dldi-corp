@@ -5,8 +5,8 @@ import Image from "next/image";
 function Header() {
     const headerOptions: Array<string> = [
         "Home",
-        "About",
         "Services",
+        "About",
         "Branches",
         "Contact",
     ];

@@ -125,7 +125,7 @@ function Branches() {
                 }}
                 className={`shadow-l mt-5 h-9 w-fit rounded-full bg-blue-900 px-2 text-xl text-white transition-all hover:scale-105 active:scale-100`}
             >
-                <AiOutlineDown />
+                <AiOutlineDown className={`${seeMoreState && "rotate-180"}`} />
             </button>
         </div>
     );
