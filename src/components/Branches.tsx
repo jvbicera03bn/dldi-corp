@@ -17,6 +17,7 @@ interface branchList {
 }
 function Branches() {
     const [seeMoreState, setSeeMoreState] = useState(false);
+    
     const branchList: Array<branchList> = [
         {
             title: "Santa Rosa Laguna",
@@ -69,14 +70,14 @@ function Branches() {
     ];
     return (
         <div
-            className={`flex snap-end scroll-mt-[4.4375rem] flex-col items-center bg-white py-10`}
+            className={`flex scroll-mt-[4.4375rem] flex-col items-center bg-white py-10 ${!seeMoreState?"snap-center":"snap-end"}`}
         >
             <h1 className="text-center text-3xl font-bold text-blue-900">
                 Branches
             </h1>
-            <AnimateHeight height={!seeMoreState ? 425 : `auto`} duration={400}>
+            <AnimateHeight height={!seeMoreState ? 425 : 850} duration={600}>
                 <div
-                    className={`border-1 flex flex-row flex-wrap justify-center gap-5 overflow-hidden px-48 py-5`}
+                    className={`border-1 flex flex-row flex-wrap justify-center gap-5 overflow-hidden px-48 pt-5`}
                 >
                     {branchList.map((item, key) => {
                         return (
