@@ -5,7 +5,7 @@ import { BsTelephone } from "react-icons/bs";
 import { FiFacebook } from "react-icons/fi";
 import { AiOutlineDown } from "react-icons/ai";
 import AnimateHeight from "react-animate-height";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 
 interface branchList {
@@ -16,9 +16,105 @@ interface branchList {
     img: string;
 }
 function Branches() {
-    const [seeMoreState, setSeeMoreState] = useState(false);
-    
+    const [seeMoreState, setSeeMoreState] = useState<boolean>(false);
+    const branchRef = useRef<null | HTMLDivElement>(null);
     const branchList: Array<branchList> = [
+        {
+            title: "Santa Rosa Laguna",
+            location:
+                "Precious Building Manila S Rd. Brgy. Dila, Balibago Sta. Rosa",
+            facebook: "https://www.facebook.com/dentalscapestarosa",
+            contactNum: "09123456789",
+            img: "/BranchesPhoto/SantaRosaLaguna.png",
+        },
+        {
+            title: "Santa Rosa Laguna",
+            location:
+                "Precious Building Manila S Rd. Brgy. Dila, Balibago Sta. Rosa",
+            facebook: "https://www.facebook.com/dentalscapestarosa",
+            contactNum: "09123456789",
+            img: "/BranchesPhoto/SantaRosaLaguna.png",
+        },
+        {
+            title: "Santa Rosa Laguna",
+            location:
+                "Precious Building Manila S Rd. Brgy. Dila, Balibago Sta. Rosa",
+            facebook: "https://www.facebook.com/dentalscapestarosa",
+            contactNum: "09123456789",
+            img: "/BranchesPhoto/SantaRosaLaguna.png",
+        },
+        {
+            title: "Santa Rosa Laguna",
+            location:
+                "Precious Building Manila S Rd. Brgy. Dila, Balibago Sta. Rosa",
+            facebook: "https://www.facebook.com/dentalscapestarosa",
+            contactNum: "09123456789",
+            img: "/BranchesPhoto/SantaRosaLaguna.png",
+        },
+        {
+            title: "Santa Rosa Laguna",
+            location:
+                "Precious Building Manila S Rd. Brgy. Dila, Balibago Sta. Rosa",
+            facebook: "https://www.facebook.com/dentalscapestarosa",
+            contactNum: "09123456789",
+            img: "/BranchesPhoto/SantaRosaLaguna.png",
+        },
+        {
+            title: "Santa Rosa Laguna",
+            location:
+                "Precious Building Manila S Rd. Brgy. Dila, Balibago Sta. Rosa",
+            facebook: "https://www.facebook.com/dentalscapestarosa",
+            contactNum: "09123456789",
+            img: "/BranchesPhoto/SantaRosaLaguna.png",
+        },
+        {
+            title: "Santa Rosa Laguna",
+            location:
+                "Precious Building Manila S Rd. Brgy. Dila, Balibago Sta. Rosa",
+            facebook: "https://www.facebook.com/dentalscapestarosa",
+            contactNum: "09123456789",
+            img: "/BranchesPhoto/SantaRosaLaguna.png",
+        },
+        {
+            title: "Santa Rosa Laguna",
+            location:
+                "Precious Building Manila S Rd. Brgy. Dila, Balibago Sta. Rosa",
+            facebook: "https://www.facebook.com/dentalscapestarosa",
+            contactNum: "09123456789",
+            img: "/BranchesPhoto/SantaRosaLaguna.png",
+        },
+        {
+            title: "Santa Rosa Laguna",
+            location:
+                "Precious Building Manila S Rd. Brgy. Dila, Balibago Sta. Rosa",
+            facebook: "https://www.facebook.com/dentalscapestarosa",
+            contactNum: "09123456789",
+            img: "/BranchesPhoto/SantaRosaLaguna.png",
+        },
+        {
+            title: "Santa Rosa Laguna",
+            location:
+                "Precious Building Manila S Rd. Brgy. Dila, Balibago Sta. Rosa",
+            facebook: "https://www.facebook.com/dentalscapestarosa",
+            contactNum: "09123456789",
+            img: "/BranchesPhoto/SantaRosaLaguna.png",
+        },
+        {
+            title: "Santa Rosa Laguna",
+            location:
+                "Precious Building Manila S Rd. Brgy. Dila, Balibago Sta. Rosa",
+            facebook: "https://www.facebook.com/dentalscapestarosa",
+            contactNum: "09123456789",
+            img: "/BranchesPhoto/SantaRosaLaguna.png",
+        },
+        {
+            title: "Santa Rosa Laguna",
+            location:
+                "Precious Building Manila S Rd. Brgy. Dila, Balibago Sta. Rosa",
+            facebook: "https://www.facebook.com/dentalscapestarosa",
+            contactNum: "09123456789",
+            img: "/BranchesPhoto/SantaRosaLaguna.png",
+        },
         {
             title: "Santa Rosa Laguna",
             location:
@@ -70,20 +166,26 @@ function Branches() {
     ];
     return (
         <div
-            className={`flex scroll-mt-[4.4375rem] flex-col items-center bg-white py-10 ${!seeMoreState?"snap-center":"snap-end"}`}
+            ref={branchRef}
+            className={`flex scroll-mt-[4.4375rem] flex-col items-center bg-white pt-10 ${
+                !seeMoreState ? "snap-center" : "snap-start"
+            }`}
         >
             <h1 className="text-center text-3xl font-bold text-blue-900">
                 Branches
             </h1>
-            <AnimateHeight height={!seeMoreState ? 425 : 850} duration={600}>
+            <AnimateHeight
+                height={!seeMoreState ? 425 : "auto"}
+                duration={500}
+            >
                 <div
-                    className={`border-1 flex flex-row flex-wrap justify-center gap-5 overflow-hidden px-48 pt-5`}
+                    className={`border-1 flex flex-row flex-wrap justify-center gap-5 overflow-hidden px-48 py-5`}
                 >
                     {branchList.map((item, key) => {
                         return (
                             <div
                                 key={key}
-                                className="rounded bg-blue-500 shadow-branches"
+                                className="rounded bg-blue-500 shadow-branches transition-all duration-500 hover:scale-105 active:scale-100"
                             >
                                 <Image
                                     className="rounded"
@@ -120,11 +222,14 @@ function Branches() {
             </AnimateHeight>
             <button
                 onClick={() => {
+                    branchRef.current?.scrollIntoView({ behavior: "smooth" });
                     setSeeMoreState((prevState) => {
                         return !prevState;
                     });
                 }}
-                className={`shadow-l mt-5 h-9 w-fit rounded-full bg-blue-900 px-2 text-xl text-white transition-all hover:scale-105 active:scale-100`}
+                className={`shadow-l mb-10 mt-5 h-9 w-fit rounded-full bg-blue-900 px-2 text-xl text-white transition-all hover:scale-105 active:scale-100 ${
+                    seeMoreState && "snap-end"
+                }`}
             >
                 <AiOutlineDown className={`${seeMoreState && "rotate-180"}`} />
             </button>
