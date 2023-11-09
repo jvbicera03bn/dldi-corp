@@ -1,5 +1,6 @@
 import AboutUs from "@/components/AboutUs";
 import Branches from "@/components/Branches";
+import Footer from "@/components/Footer";
 import HomeSect from "@/components/HomeSect";
 import Services from "@/components/Services";
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
                 <Services />
                 <AboutUs />
                 <Branches />
+                <Footer/>
             </div>
         </div>
     );

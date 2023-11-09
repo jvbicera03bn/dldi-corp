@@ -33,6 +33,18 @@ function Services() {
             title: "Braces",
             logo: "/ServicesPhoto/dental-brace.svg",
         },
+        {
+            title: "Dental Sealants",
+            logo: "/ServicesPhoto/dental-brace.svg",
+        },
+        {
+            title: "Teeth Whitening",
+            logo: "/ServicesPhoto/dental-brace.svg",
+        },
+        {
+            title: "Dental Filler",
+            logo: "/ServicesPhoto/dental-brace.svg",
+        },
     ];
     return (
         <div
@@ -42,20 +54,20 @@ function Services() {
                 OUR SERVICES
             </h1>
             <p className="w-1/2 pb-10 pt-2 text-center text-white">
-                At DentalScape, we are committed to providing top-notch dental
+                {`At DentalScape, we are committed to providing top-notch dental
                 care. We take pride in our dedication to exceptional service and
                 the well-being of our patients. Our skilled team of
                 professionals ensures a comfortable and family-friendly
                 atmosphere, while our state-of-the-art equipment ensures the
                 highest quality of care. Your dental health and satisfaction are
-                our priorities. Welcome to a healthier, happier smile at DentalScape
+                our priorities. Welcome to a healthier, happier smile at DentalScape`}
             </p>
             <div className="flex flex-wrap justify-center gap-10 px-48">
                 {services.map((item, key) => {
                     return (
                         <div
                             key={key}
-                            className="flex w-[233px] flex-col items-center rounded-lg border-2 border-white p-10"
+                            className="flex w-[200px] flex-col items-center rounded-lg border-2 border-white py-5"
                         >
                             <Image
                                 className="logos"
