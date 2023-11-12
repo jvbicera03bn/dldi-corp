@@ -222,10 +222,10 @@ function Branches() {
             </AnimateHeight>
             <button
                 onClick={() => {
-                    branchRef.current?.scrollIntoView({ behavior: "smooth" });
                     setSeeMoreState((prevState) => {
                         return !prevState;
                     });
+                    branchRef.current?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className={`shadow-l mb-10 mt-5 h-9 w-fit rounded-full bg-blue-900 px-2 text-xl text-white transition-all hover:scale-105 active:scale-100 ${
                     seeMoreState && "snap-end"
